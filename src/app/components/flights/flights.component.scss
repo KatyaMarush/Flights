@@ -1,0 +1,27 @@
+.container {
+  margin-top: 15px;
+  padding: 0 5px;
+  .selected {
+    background: #CCCCCC;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+      border-top: 2px lightgray solid;
+      height: 40px
+    }
+  
+    th {
+      text-align: left;
+      height: 40px;
+    }
+  
+    td {
+      cursor: pointer;
+    }
+  }
+}
+

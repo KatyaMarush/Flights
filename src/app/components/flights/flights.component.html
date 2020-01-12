@@ -1,0 +1,28 @@
+
+<div class="container">
+<div *ngIf="flights === null; else items">Loading...</div>
+<ng-template #items>
+  <table>
+    <tr>
+      <th>Flight Number</th>
+      <th>Origin</th>
+      <th>Origin Date</th>
+      <th>Destination</th>
+      <th>Destination Date</th>
+    </tr>
+    <tr
+      *ngFor="let flight of flights | keyvalue"
+      (click)="onFlightClick(flight.key)"
+      [class.selected]="selectedKey.toString() === flight.key"
+    >
+      <td>{{ flight.value.num }}</td>
+      <td>{{ flight.value.from }}</td>
+      <td>{{ flight.value.from_date }}</td>
+      <td>{{ flight.value.to }}</td>
+      <td>{{ flight.value.to_date }}</td>
+    </tr>
+  </table>
+</ng-template>
+</div>
+
+

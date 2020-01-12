@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    border: 2px gray solid;
+  }
+  
+  .container > div {
+  }
+  
+  .workers {
+    flex: 1;
+  }
+  
+  .flights {
+    flex: 2;
+    border-left: 2px grey solid;
+    border-right:2px grey solid;
+  }
+  
+  .flightInfo {
+    flex: 1;
+  }

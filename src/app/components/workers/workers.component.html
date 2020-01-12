@@ -1,0 +1,19 @@
+<div class="container">
+<h2>Workers</h2>
+
+<div *ngIf="workers === null; else items">Loading...</div>
+<ng-template #items>
+  <div class="workers">
+    <div class="worker"
+      *ngFor="let worker of workers | keyvalue"
+      (click)="onWorkerClick(worker.key)"
+      [class.selected]="selectedKey.toString() === worker.key"
+    >
+      {{ worker.value.name }}
+    </div>
+  </div>
+</ng-template>
+</div>
+
+
+

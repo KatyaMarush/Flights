@@ -1,0 +1,10 @@
+<div class="container">
+  <div *ngIf="flight === null; else items">Loading...</div>
+  <ng-template class="flightInfo" #items>
+    <p>Plane Number: {{ flight.plane }}</p>
+    <p>Duration: {{ flight.duration | timeConverter }}</p>
+    <p>Origin Date: {{ flight.from_gate }}</p>
+    <p>Destination Gate: {{ flight.to_gate }}</p>
+  </ng-template>
+</div>
+
