@@ -8,7 +8,7 @@ import { WorkerService } from '../../services/worker.service'
   templateUrl: './workers.component.html',
   styleUrls: ['./workers.component.scss']
 })
-export class WorkersComponent implements OnInit {
+export class WorkersComponent implements OnInit, OnDestroy {
   workers: Worker[];
   selectedKey: number;
   workersSubscription: Subscription;
